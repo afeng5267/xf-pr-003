@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1a1a2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    width: 480px;
+    height: 720px;
+    box-shadow: 0 0 30px rgba(0, 200, 255, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#game-canvas {
+    display: block;
+    background: linear-gradient(180deg, #0f0f23 0%, #1a1a4e 50%, #0f0f23 100%);
+}
+
+#hud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 0 6px rgba(0, 200, 255, 0.8);
+    z-index: 10;
+    pointer-events: none;
+}
+
+#start-screen, #game-over-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 35, 0.92);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    z-index: 20;
+}
+
+#start-screen h1, #game-over-screen h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(0, 200, 255, 0.6);
+}
+
+#start-screen p, #game-over-screen p {
+    font-size: 16px;
+    margin: 6px 0;
+    color: #aaa;
+}
+
+#final-score {
+    font-size: 24px !important;
+    color: #ffd700 !important;
+    margin: 16px 0 !important;
+}
+
+#start-btn, #restart-btn {
+    margin-top: 24px;
+    padding: 12px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #0066cc, #00aaff);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 170, 255, 0.4);
+    transition: all 0.3s;
+}
+
+#start-btn:hover, #restart-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(0, 170, 255, 0.6);
+}
